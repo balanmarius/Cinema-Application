@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Marbal Cinema</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="stil.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div id="navigation">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/movies">Our movies</a></li>
+      <li><a href="/booktickets">Book tickets</a></li>
+      <li><a href="/bar_menu">Bar menu</a></li>
+      <li><a href="/prizes">Win prizes</a></li>
+    </ul>
+  </div>
+
+  <form style="float: right;" action="/logout" method="POST">
+    <input class="buttons" style="color:black;float:right;margin:10px;width:100px;height:30px;font-weight: bold;"
+      type="submit" value="Logout">
+  </form>
+  <% if(user){ %>
+  <div style="margin:10px;font-size: 25px;">Welcome, <%= user %>!</div>
+  <% } %>
+
+  <h2
+    style="margin-top:30px;text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    You will find at the bar:
+  </h2>
+  <div id="barWrapper">
+    <div class="barItems">
+      <img class="barImages" src="/images/cola.png">
+      <div class="barInfo">
+        <p>Cola cola</p>
+        <p class="itemPrice">Price: 3$.</p>
+      </div>
+    </div>
+    <div class="barItems">
+      <img class="barImages" src="images/nachos.png">
+      <div class="barInfo">
+        <p>Nachos</p>
+        <p class="itemPrice">Price: 6$.</p>
+      </div>
+    </div>
+    <div class="barItems">
+      <img class="barImages" src="images/nachos_cola.png">
+      <div class="barInfo">
+        <p>Nachos + Cola(Menu)</p>
+        <p class="itemPrice">Price: 8$.</p>
+      </div>
+    </div>
+    <div class="barItems">
+      <img class="barImages" src="images/popcorn.jpg">
+      <div class="barInfo">
+        <p>Popcorn</p>
+        <p class="itemPrice">Price: 4$.</p>
+      </div>
+    </div>
+    <div class="barItems">
+      <img class="barImages" src="images/cola_popcorn.png">
+      <div class="barInfo">
+        <p>Popcorn + Cola(Menu)</p>
+        <p class="itemPrice">Price: 6$.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

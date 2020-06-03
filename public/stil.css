@@ -1,0 +1,489 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: white;
+}
+body {
+  background: #000000;
+}
+#navigation ul {
+  text-align: center;
+  list-style-type: none;
+  background: rgb(91, 206, 62);
+  margin: 0;
+  padding: 0;
+}
+#navigation ul > li {
+  box-sizing: border-box;
+  margin: 0px -2px;
+  cursor: pointer;
+  display: inline-block;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+#navigation li {
+  border-right: solid 1px rgb(31, 124, 7);
+}
+#navigation li:first-child {
+  border-left: 1px solid rgb(31, 124, 7);
+}
+
+#navigation ul > li:hover {
+  background: #67e467;
+}
+#navigation li a {
+  box-sizing: border-box;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 25px 22px;
+}
+#navigation li:hover > a {
+  color: #113818;
+}
+@media screen and (max-width: 930px) {
+  #navigation li a {
+    font-size: 20px;
+    padding: 0px;
+  }
+  #navigation ul li {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 4px;
+  }
+  #navigation ul li:last-child {
+    padding-bottom: 4px;
+  }
+}
+
+/* movies.html */
+/* movies.html */
+/* movies.html */
+
+.wrapper {
+  width: 100%;
+}
+#movies {
+  display: grid;
+  grid-template-columns: 1 fr;
+}
+.movies {
+  position: relative;
+  border: 1px solid rgb(255, 255, 255);
+  margin: 10px;
+  border-radius: 5px;
+}
+@media screen and (min-width: 420px) {
+  .wrapper {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  #movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.movieTitles {
+  margin-top: 10px;
+  text-align: center;
+  color: rgb(26, 209, 41);
+}
+.filmImages {
+  border: 1px solid rgb(41, 49, 44);
+  margin: 10px;
+  width: 50%;
+  float: left;
+}
+.moviesDescription {
+  height: 250px;
+  margin: 10px;
+  color: rgb(116, 238, 163);
+}
+.moviesTrailers {
+  width: calc(100% - 20px);
+  border: 1px solid rgb(41, 49, 44);
+  margin: 10px;
+}
+.beforeTrailer {
+  margin-left: 10px;
+  float: left;
+  color: rgb(116, 238, 163);
+}
+.moreInfo {
+  float: left;
+  margin: 10px;
+  color: rgb(116, 238, 163);
+}
+.moreInfo a {
+  color: rgb(41, 145, 81);
+}
+.moviesDirector {
+  color: rgb(142, 175, 159);
+  margin-left: 20px;
+  margin-right: 50px;
+  float: left;
+}
+.bookTickets {
+  text-align: center;
+  margin: 0px 0px 10px;
+}
+.bookTickets a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bookButton {
+  border: 3px solid rgb(22, 102, 33);
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(39, 226, 39);
+}
+#title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.sortingButton {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  height: 24px;
+  background-color: rgb(142, 252, 142);
+  border: 1px solid rgb(0, 175, 0);
+  border-radius: 5px;
+}
+.sortingButton:hover {
+  background-color: rgb(55, 202, 55);
+}
+.sortingButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+#sortingButtons {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 80px);
+  justify-content: center;
+  grid-gap: 15px;
+}
+@media screen and (max-width: 600px) {
+  #sortingButtons {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+    grid-gap: 10px;
+  }
+}
+#allButton {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* booktickets.html */
+/* booktickets.html */
+/* booktickets.html */
+
+
+.inputForm{
+  margin-left: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+.inputForm label{
+  font-size: 20px;
+}
+#Username
+{
+  border:none;
+  color:black;
+  margin-right: 30px;
+  width:150px;
+}
+#NumSeats{
+  color:black;
+  width:60px;
+}
+
+.seatStructure{
+  text-align: center;
+}
+.screen
+{
+  width:100%;
+  height:20px;
+  background:#4388cc;
+  color:#fff;
+  line-height:20px;
+  font-size:15px;
+  margin-top: 20px;
+}
+#startSelecting{
+  color:black;
+  cursor: pointer;
+  width: 125px;
+  height: 25px;
+  background-color: rgb(152, 235, 152);
+  border:1px solid green;
+  border-radius: 3px;
+}
+#seatsBlock td{
+  font-size: 20px;
+}
+
+.smallBox::before
+{
+  content:"";
+  width:20px;
+  height:20px;
+  float:left;
+  margin-right:10px;
+}
+.greenBox::before
+{
+  background:Green;
+}
+.redBox::before
+{
+  background:Red;
+}
+.emptyBox::before
+{
+  background-color:#ccc;
+}
+
+.seatGap
+{
+  width:40px;
+}
+.seatVGap
+{
+  height:40px;
+}
+table
+{
+  margin:0 auto;
+  text-align:center;
+}
+.Displaytable
+{
+  text-align:center;
+  margin-bottom: 30px;
+}
+.Displaytable td, .Displaytable th {
+    border: 1px solid;
+    text-align: left;
+}
+textarea
+{
+  border:none;
+  background:transparent;
+  min-height: 75px;
+}
+input[type=checkbox] {
+    width:0px;
+    margin-right:50px;
+    margin-bottom: 40px;
+}
+
+input[type=checkbox]::before{
+    border-radius: 3px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align:middle;
+    text-align: center;
+    background-color:#ccc;
+}
+
+input[type=checkbox]:checked::before{
+    background-color:green;
+    font-size: 20px;
+}
+
+#confirmButton{
+  color:black;
+  cursor: pointer;
+  width: 125px;
+  height: 25px;
+  background-color: rgb(152, 235, 152);
+  border:1px solid green;
+  border-radius: 3px;
+}
+#coloredBoxes{
+  margin-top: 20px;
+}
+#coloredBoxes div{
+  margin-right: 25px;
+}
+
+.reserved{
+     border-radius: 3px;
+    margin-top: -8px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color:red;
+} 
+
+#selectMovieDiv{
+  text-align: center;
+}
+
+
+/* home.html */
+/* home.html */
+/* home.html */
+
+#homeTitle{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 60px;
+
+}
+#homeSubtitle{
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* BAR MENU */
+/* BAR MENU */
+/* BAR MENU */
+
+#barWrapper{
+  width: 100%;
+}
+.barItems{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin:30px;
+  border:1px solid rgb(165, 228, 163);
+  border-radius: 10px;
+}
+.barImages{
+  border-radius: 10px;
+  margin:20px;
+  float:left;
+}
+.barInfo{
+  text-align: center;
+  font-size: 40px;
+}
+.itemPrice{
+  margin-top:10px;
+  font-size: 25px;
+}
+
+/* WIN PRIZES */
+/* WIN PRIZES */
+/* WIN PRIZES */
+
+#prizesForm{
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 50px;
+  text-align: center;
+}
+#codeName{
+  height: 25px;
+}
+.buttons{
+  background-color: rgb(152, 235, 152);
+  border:1px solid green;
+  border-radius: 3px;
+  color:black;
+  cursor: pointer;
+}
+#btnPrize{
+  visibility: hidden;
+  margin-top: 10px;
+}
+#divPrize{
+  text-align: center;
+  margin-top:30px;
+}
+
+/* login */
+/* login */
+/* login */
+
+#loginTitle{
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  color:rgb(49, 170, 49);
+}
+#loginForm{
+  margin-top: 20px;
+  text-align: center;
+}
+.loginInputs{
+  color:black;
+  height:30px;
+  width: 200px;
+  font-size: 20px;
+}
+#btnLogin{
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+}
+#registerLink {
+  text-align: center;
+  margin-top:50px;
+  color:rgb(49, 170, 49);
+}
+#registerLink a{
+  font-size: 25px;
+  text-decoration: none;
+  color:black;
+}
+
+/* register */
+/* register */
+/* register */
+#registerTitle{
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  color:rgb(49, 170, 49);
+}
+#registerForm{
+  margin-top: 20px;
+  text-align: center;
+}
+#btnRegister{
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+}
+#loginLink{
+  text-align: center;
+  margin-top:50px;
+  color:rgb(49, 170, 49);
+}
+#loginLink a{
+  font-size: 25px;
+  text-decoration: none;
+  color:black;
+}

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Marbal Cinema</title>
+  <link rel="stylesheet" type="text/css" href="stil.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+</head>
+
+<body>
+  <div id="navigation">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/movies">Our movies</a></li>
+      <li><a href="/booktickets">Book tickets</a></li>
+      <li><a href="/bar_menu">Bar menu</a></li>
+      <li><a href="/prizes">Win prizes</a></li>
+    </ul>
+  </div>
+
+  <form style="float: right;" action="/logout" method="POST">
+    <input class="buttons" style="color:black;float:right;margin:10px;width:100px;height:30px;font-weight: bold;"
+      type="submit" value="Logout">
+  </form>
+  <% if(user){ %>
+  <div style="margin:10px;font-size: 25px;">Welcome, <%= user %>!</div>
+  <% } %>
+
+  <br />
+  <h1 id="title">Playing this week:</h1>
+  <form id="sortingForm" action="">
+    <div id="sortingButtons">
+      <input id="b1" class="sortingButton" type="button" value="Comedy" />
+      <input id="b2" class="sortingButton" type="button" value="Crime" />
+      <input id="b3" class="sortingButton" type="button" value="Horror" />
+      <input id="b4" class="sortingButton" type="button" value="Action" />
+      <input id="b5" class="sortingButton" type="button" value="Drama" />
+      <input id="b6" class="sortingButton" type="button" value="War" />
+    </div>
+    <div id="allButton">
+      <input id="b7" class="sortingButton" type="button" value="Display all" />
+    </div>
+  </form>
+  <div id="movies" class="wrapper">
+    <!-- The Godfather -->
+    <div id="filmOne" class="movies">
+      <h2 class="movieTitles">The Godfather</h2>
+      <img src="images/TheGodfather.png" alt="The Godfather image." class="filmImages" />
+      <div class="moviesDescription">
+        The story, spanning from 1945 to 1955, chronicles the Corleone family
+        under patriarch Vito Corleone (Brando), focusing on the transformation
+        of one of his sons, Michael Corleone (Pacino), from reluctant family
+        outsider to ruthless mafia boss.
+      </div>
+      <div class="moviesDirector">Director/s: Francis Ford Coppola.</div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt0068646/?ref_=nv_sr_srsg_0" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/sY1S34973zA" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "The Godfather"</a>
+        </button>
+      </div>
+    </div>
+    <!-- The Wolf of Wall Street -->
+    <div id="filmTwo" class="movies">
+      <h2 class="movieTitles">The Wolf of Wall Street</h2>
+      <img src="images/TheWolfOfWallStreet.png" alt="The Wolf of Wall Street image." class="filmImages" />
+      <div class="moviesDescription">
+        Based on the true story of Jordan Belfort, from his rise to a wealthy
+        stock-broker living the high life to his fall involving crime,
+        corruption and the federal government.
+      </div>
+      <div class="moviesDirector">Director/s: Martin Scorsese.</div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt0993846/?ref_=rt_li_tt" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/iszwuX1AK6A" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "The Wolf of Wall Street"</a>
+        </button>
+      </div>
+    </div>
+    <!-- The Conjuring -->
+    <div id="filmThree" class="movies">
+      <h2 class="movieTitles">The Conjuring</h2>
+      <img src="images/TheConjuring.png" alt="The Conjuring image." class="filmImages" />
+      <div class="moviesDescription">
+        Paranormal investigators Ed and Lorraine Warren work to help a family
+        terrorized by a dark presence in their farmhouse.
+      </div>
+      <div class="moviesDirector">Director/s: James Wan.</div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt1457767/" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/k10ETZ41q5o" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "The Conjuring"</a>
+        </button>
+      </div>
+    </div>
+    <!-- Saving Private Ryan -->
+    <div id="filmFour" class="movies">
+      <h2 class="movieTitles">Saving Private Ryan</h2>
+      <img src="images/SavingPrivateRyan.png" alt="Saving Private Ryan image." class="filmImages" />
+      <div class="moviesDescription">
+        Following the Normandy Landings, a group of U.S. soldiers go behind
+        enemy lines to retrieve a paratrooper whose brothers have been killed
+        in action.
+      </div>
+      <div class="moviesDirector">Director/s: Steven Spielberg.</div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt0120815/" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/zwhP5b4tD6g" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "Saving Private Ryan"</a>
+        </button>
+      </div>
+    </div>
+    <!-- 22 Jump Street -->
+    <div id="filmFive" class="movies">
+      <h2 class="movieTitles">22 Jump Street</h2>
+      <img src="images/22JumpStreet.png" alt="22 Jump Street image." class="filmImages" />
+      <div class="moviesDescription">
+        After making their way through high school (twice), big changes are in
+        store for officers Schmidt and Jenko when they go deep undercover at a
+        local college.
+      </div>
+      <div class="moviesDirector">
+        Director/s: Phil Lord, Christopher Miller.
+      </div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt2294449/" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/qP755JkDxyM" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "22 Jump Street"</a>
+        </button>
+      </div>
+    </div>
+    <!-- Captain Phillips -->
+    <div id="filmSix" class="movies">
+      <h2 class="movieTitles">Captain Phillips</h2>
+      <img src="images/CaptainPhillips.png" alt="Captain Phillips image." class="filmImages" />
+      <div class="moviesDescription">
+        The true story of Captain Richard Phillips and the 2009 hijacking by
+        Somali pirates of the U.S.-flagged MV Maersk Alabama, the first
+        American cargo ship to be hijacked in two hundred years.
+      </div>
+      <div class="moviesDirector">
+        Director/s: Paul Greengrass.
+      </div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt1535109/" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/GEyM01dAxp8" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "Captain Phillips"</a>
+        </button>
+      </div>
+    </div>
+    <!-- Schindler's List -->
+    <div id="filmSeven" class="movies">
+      <h2 class="movieTitles">Schindler's List</h2>
+      <img src="images/Schindler'sList.png" alt="Schindler's List image." class="filmImages" />
+      <div class="moviesDescription">
+        In German-occupied Poland during World War II, industrialist Oskar
+        Schindler gradually becomes concerned for his Jewish workforce after
+        witnessing their persecution by the Nazis.
+      </div>
+      <div class="moviesDirector">
+        Director/s: Steven Spielberg.
+      </div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt0108052/?ref_=nv_sr_srsg_0" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/M5FpB6qDGAE" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "Schindler's List"</a>
+        </button>
+      </div>
+    </div>
+    <!-- Prisoners -->
+    <div id="filmEight" class="movies">
+      <h2 class="movieTitles">Prisoners</h2>
+      <img src="images/Prisoners.png" alt="Prisoners image." class="filmImages" />
+      <div class="moviesDescription">
+        When Keller Dover's daughter and her friend go missing, he takes
+        matters into his own hands as the police pursue multiple leads and the
+        pressure mounts.
+      </div>
+      <div class="moviesDirector">
+        Director/s: Denis Villeneuve.
+      </div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt1392214/?ref_=nv_sr_srsg_0" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/bpXfcTF6iVk" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "Prisoners"</a>
+        </button>
+      </div>
+    </div>
+    <!-- Just Go with It -->
+    <div id="filmNine" class="movies">
+      <h2 class="movieTitles">Just Go with It</h2>
+      <img src="images/JustGoWithIt.png" alt="Just Go with It image." class="filmImages" />
+      <div class="moviesDescription">
+        On a weekend trip to Hawaii, a plastic surgeon convinces his loyal
+        assistant to pose as his soon-to-be-divorced wife in order to cover up
+        a careless lie he told to his much-younger girlfriend.
+      </div>
+      <div class="moviesDirector">
+        Director/s: Dennis Dugan.
+      </div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt1564367/?ref_=fn_al_tt_1" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/fpj7i2CPt8M" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "Just Go with It"</a>
+        </button>
+      </div>
+    </div>
+    <!-- Fast Five -->
+    <div id="filmTen" class="movies">
+      <h2 class="movieTitles">Fast Five</h2>
+      <img src="images/FastFive.png" alt="Fast Five image." class="filmImages" />
+      <div class="moviesDescription">
+        Dominic Toretto and his crew of street racers plan a massive heist to
+        buy their freedom while in the sights of a powerful Brazilian drug
+        lord and a dangerous federal agent.
+      </div>
+      <div class="moviesDirector">
+        Director/s: Justin Lin.
+      </div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt1596343/?ref_=nv_sr_srsg_0" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/mw2AqdB5EVA" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "Fast Five"</a>
+        </button>
+      </div>
+    </div>
+    <!-- The Shawshank Redemption -->
+    <div id="filmEleven" class="movies">
+      <h2 class="movieTitles">The Shawshank Redemption</h2>
+      <img src="images/TheShawshankRedemption.png" alt="The Shawshank Redempion image." class="filmImages" />
+      <div class="moviesDescription">
+        Two imprisoned men bond over a number of years, finding solace and
+        eventual redemption through acts of common decency.
+      </div>
+      <div class="moviesDirector">
+        Director/s: Frank Darabont.
+      </div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt0111161/" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/6hB3S9bIaco" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "The Shawshank Redemption"</a>
+        </button>
+      </div>
+    </div>
+    <!-- Sinister -->
+    <div id="filmTwelve" class="movies">
+      <h2 class="movieTitles">Sinister</h2>
+      <img src="images/Sinister.png" alt="Sinister image." class="filmImages" />
+      <div class="moviesDescription">
+        Washed-up true-crime writer Ellison Oswalt finds a box of super 8 home
+        movies which suggest the murder he's currently researching is the work
+        of a serial killer whose work dates back to the 1960s.
+      </div>
+      <div class="moviesDirector">
+        Director/s: Scott Derrickson.
+      </div>
+      <div class="moreInfo">
+        More info about the movie and cast:
+        <a href="https://www.imdb.com/title/tt1922777/" target="blank">Click here</a>
+      </div>
+      <br />
+      <p class="beforeTrailer">Watch the movie trailer here:</p>
+      <iframe class="moviesTrailers" src="https://www.youtube.com/embed/_kbQAJR9YWQ" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="bookTickets">
+        <button class="bookButton">
+          <a href="/booktickets">Book Tickets for "Sinister"</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

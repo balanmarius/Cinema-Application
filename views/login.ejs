@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marbal Cinema</title>
+  <link rel="stylesheet" type="text/css" href="stil.css">
+</head>
+
+<body>
+  <div id="navigation">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/movies">Our movies</a></li>
+      <li><a href="/booktickets">Book tickets</a></li>
+      <li><a href="/bar_menu">Bar menu</a></li>
+      <li><a href="/prizes">Win prizes</a></li>
+    </ul>
+  </div>
+
+  <h1 id="loginTitle">Login<h1>
+      <form id="loginForm" method="POST" action="/login">
+        <input class="loginInputs" type='email' name='email' placeholder='Email' required>
+        <br>
+        <input class="loginInputs" type='password' name='password' placeholder='Password' required>
+        <br><br>
+        <input id="btnLogin" class="buttons" type='submit' value="Submit">
+      </form>
+      <div id="registerLink">
+        Create an account here: <button class="buttons"><a href='/register'>Register</a></button>
+      </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Marbal Cinema</title>
+  <link rel="stylesheet" type="text/css" href="stil.css" />
+  <script src="script.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+</head>
+
+<body>
+  <div id="navigation">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/movies">Our movies</a></li>
+      <li><a href="/booktickets">Book tickets</a></li>
+      <li><a href="/bar_menu">Bar menu</a></li>
+      <li><a href="/prizes">Win prizes</a></li>
+    </ul>
+  </div>
+
+  <form style="float: right;" action="/logout" method="POST">
+    <input class="buttons" style="color:black;float:right;margin:10px;width:100px;height:30px;font-weight: bold;"
+      type="submit" value="Logout">
+  </form>
+  <% if(user){ %>
+  <div style="margin:10px;font-size: 25px;">Welcome, <%= user %>!</div>
+  <% } %>
+
+  <form id="prizesForm">
+    <label for="code">Your code is:</label>
+    <input style="color:black" type="text" name="code" id="codeName" value=<%= winnerCode %> readonly>
+  </form>
+
+  <div id="divPrize" style="color:white">
+    <p><%= prize %></p>
+    <br>
+    <img style="margin-top:30px" src=<%= path %>>
+    <br>
+    <p style="margin-top: 30px;"><%= msg %></p>
+  </div>
+
+
+</body>
+
+</html>
