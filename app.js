@@ -63,7 +63,7 @@ const users = [
 ]
 
 
-app.get('/', (req, res) => {
+app.get('/', redirectLogin, (req, res) => {
   //const userID = req.session.userID;
   const { userID } = req.session;
   //const userID = 1;
